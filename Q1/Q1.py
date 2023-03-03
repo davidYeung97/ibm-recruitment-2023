@@ -22,9 +22,6 @@ def get_key(item):
 tshirt_stock_list = sorted(tshirt_stock_list, key=get_key, reverse=True)
 req_details_list = sorted(req_details_list, key=get_key, reverse=True)
 
-print(tshirt_stock_list)
-print(req_details_list)
-
 
 num_sum = 0
 canFufill = True
@@ -35,5 +32,8 @@ for i in range(int(request_count)):
     if(get_key(stock_item) < get_key(request_item)):
         canFufill = False
         break
-
-print(canFufill)
+    
+if(canFufill):
+    print('Yes')
+else:
+    print('No')
