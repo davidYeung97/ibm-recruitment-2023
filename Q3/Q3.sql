@@ -3,7 +3,7 @@
 SELECT
   article_category.owner_id,
   article_category.owner_name,
-  COUNT(DISTINCT category) AS category_diversity
+  COUNT(DISTINCT category) AS different_category_count
 FROM
     (
         
